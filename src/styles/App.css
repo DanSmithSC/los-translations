@@ -9,7 +9,7 @@
 .container__table {
   height: 850px;
   overflow: auto;  /* or auto */
-  padding: 20px;
+  padding: 10 5 10 5px;
 }
 
 .ui.table thead tr:first-child > th {
