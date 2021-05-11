@@ -104,7 +104,7 @@ class TranslationsTable extends React.Component {
             />
             <span>
                <Popup
-                trigger={<Icon circular name='info circle' size='large' inverted color="black" fitted />}
+                trigger={<Icon circular name='exclamation circle' size='large' inverted color="black" fitted />}
                 content='Please Select Your Language'
                 position="top center"
                 inverted
@@ -174,7 +174,7 @@ class TranslationsTable extends React.Component {
           />
           <span>
                <Popup
-                trigger={<Icon circular name='info circle' size='large' inverted color="black" fitted />}
+                trigger={<Icon circular name='exclamation circle' size='large' inverted color="black" fitted />}
                 content='Please Select Your Language'
                 position="top center"
                 inverted
@@ -261,7 +261,7 @@ class TranslationsTable extends React.Component {
               <Table.Cell>
                 {raceTranslations[unit.race.toLowerCase()].[this.props.sourceLanguage.toLowerCase()]}
                 <span style={{float:"right"}} > 
-                  <TableIcon src={unit.race.toLowerCase()} />
+                  <TableIcon src={unit.race.toLowerCase() } />
                 </span>
               </Table.Cell>
               <Table.Cell>
