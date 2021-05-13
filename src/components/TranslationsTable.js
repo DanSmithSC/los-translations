@@ -1,3 +1,4 @@
+import '../styles/TranslationTable.css'
 import React from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux'
@@ -46,7 +47,8 @@ class TranslationsTable extends React.Component {
 
     let baseFilters = [];
     let filteredUnits = [];
-    const sortPriority = ["mythical","legendary","epic","rare","common"];
+    const sortRarityPriority = ["mythical","legendary","epic","rare","common"];
+    const sortColorPriority = ["red","yellow","green","purple"]
 
     if(baseRarityFilters.length > 0){
       baseFilters.push(
@@ -72,7 +74,11 @@ class TranslationsTable extends React.Component {
 
     if(!baseFilters.length){
       return filteredUnits = creatureTranslations.sort( (a,b)=> {
-        return sortPriority.indexOf( a.rarity.toLowerCase() ) - sortPriority.indexOf( b.rarity.toLowerCase() );
+        if(sortRarityPriority.indexOf( a.rarity.toLowerCase() ) > sortRarityPriority.indexOf( b.rarity.toLowerCase() )) return 1;
+        if(sortRarityPriority.indexOf( a.rarity.toLowerCase() ) < sortRarityPriority.indexOf( b.rarity.toLowerCase() )) return -1;
+
+        if(sortColorPriority.indexOf( a.color.toLowerCase() ) > sortColorPriority.indexOf( b.color.toLowerCase() )) return 1;
+        if(sortColorPriority.indexOf( a.color.toLowerCase() ) < sortColorPriority.indexOf( b.color.toLowerCase() )) return -1;
       });
     } else {
       return filteredUnits = baseFilters.reduce( (results, filter) => {
@@ -82,7 +88,11 @@ class TranslationsTable extends React.Component {
         return _.filter(results, filter)
 
       }, creatureTranslations).sort( (a,b)=> {
-        return sortPriority.indexOf( a.rarity.toLowerCase() ) - sortPriority.indexOf( b.rarity.toLowerCase() );
+        if(sortRarityPriority.indexOf( a.rarity.toLowerCase() ) > sortRarityPriority.indexOf( b.rarity.toLowerCase() )) return 1;
+        if(sortRarityPriority.indexOf( a.rarity.toLowerCase() ) < sortRarityPriority.indexOf( b.rarity.toLowerCase() )) return -1;
+
+        if(sortColorPriority.indexOf( a.color.toLowerCase() ) > sortColorPriority.indexOf( b.color.toLowerCase() )) return 1;
+        if(sortColorPriority.indexOf( a.color.toLowerCase() ) < sortColorPriority.indexOf( b.color.toLowerCase() )) return -1;
       });
     }
     

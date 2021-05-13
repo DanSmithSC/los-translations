@@ -14,7 +14,7 @@ const Footer = () => {
       <Popup
         trigger={<Image src={minionImg} inline/>}
         position="top right"
-        content="Thanks Boaty for the Translations!"
+        content="Thanks Boaty!"
       />
       <Popup
           trigger={<Icon circular name='info circle' size='large' inverted color="black" fitted inline />}
