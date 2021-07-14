@@ -1,7 +1,9 @@
 .container__table {
   height: 800px;
   overflow: auto;  /* or auto */
-  padding: 20 5 10 5px;
+  padding: 5px 5px 10px 10px;
+  padding-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 .ui.table thead th {

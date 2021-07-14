@@ -99,8 +99,8 @@ class TranslationsTable extends React.Component {
   } 
 
   buildTableHeader(){
-
-    if(this.props.sourceLanguage){
+    
+    if(this.props.sourceLanguage.toLowerCase){ 
 
       return (
         
@@ -321,7 +321,7 @@ class TranslationsTable extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  // console.log(state)
+  console.log(state)
   return {
     languages: state.languages,
     rarities: state.rarities,
