@@ -18,7 +18,7 @@ const Footer = () => {
       />
       <Popup
           trigger={<Icon circular name='info circle' size='large' inverted color="black" fitted inline />}
-          content='Last Updated for the Skadi Blöt Festival'
+          content='Last Updated for the Duskpaw-Farcast Blöt Festival'
           position="top right"
           inverted
         />
