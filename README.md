@@ -1,5 +1,7 @@
 # Legend of Solgard Creature Translations
 
+https://translations.denzik.io/
+
 Legend of Solgard is a game played globally around the world. Many players connect and discuss the game in numerous languages. In an effort to help players engage and connect more easily I built this simple site to translate the game's creatures into the various languages supported by the game.
 
 ### Humble Origins
