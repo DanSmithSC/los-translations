@@ -2,7 +2,7 @@ import '../styles/TranslationTable.css'
 import React from 'react';
 import _ from 'lodash';
 import { connect } from 'react-redux'
-import { Table, Icon, Popup } from 'semantic-ui-react';
+import { Table, Icon, Popup, Segment } from 'semantic-ui-react';
 import LanguageSearchDropdown from './LanguageSearchDropdown';
 import MultiSelectDropdown from './MultiSelectDropdown';
 import TableIcon from './TableIcon';
@@ -303,19 +303,14 @@ class TranslationsTable extends React.Component {
   render(){
 
     return (
-      
-      <Table celled inverted>
+      <Segment>
         
-        <Table.Header>
-          {this.buildTableHeader()}
-        </Table.Header>
+        <Table inverted celled selectable compact unstackable>
+          <Table.Header>{this.buildTableHeader()}</Table.Header>
+          <Table.Body>{this.buildTableBody()}</Table.Body>
+        </Table>
 
-        <Table.Body>
-          {this.buildTableBody()}
-        </Table.Body>
-
-      </Table>
-
+      </Segment>
     )
   }
 }
